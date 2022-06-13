@@ -1,0 +1,32 @@
+#game {
+    text-align: center;
+}
+.grid {
+    position: relative;
+    margin: 20px auto;
+    width: 580px;
+    height: 300px;
+    border: solid var(--primary-color) 5px;
+}
+
+.user {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: darkmagenta;
+}
+
+.block {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: var(--primary-color);
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color:deeppink;
+    border-radius:10px;
+}

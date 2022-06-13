@@ -1,0 +1,148 @@
+
+
+#element {
+  scrollbar-width: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+#grid {
+    margin-top:20px;
+    width:100%;
+    border:5px solid aliceblue;
+    height: 500px;
+}
+
+.stage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.message-box {
+    text-align: center;
+    margin-right:30px;
+}
+
+.hand {
+    cursor: pointer;
+    width:220px;
+    height:220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hand:hover {
+    height:270px;
+}
+
+.hands-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.computer-selection {
+    margin:50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+ .dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--green-color);
+    color: var(--green-color);
+    box-shadow: 9999px 0 0 -5px var(--green-color);
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: .25s;
+  }
+
+
+  /* Don't show three dots on mobile devices */
+  @media only screen and (max-width: 600px) {
+    .dot-pulse {
+      display: none;
+    }
+  }
+  
+  .dot-pulse::before, .dot-pulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--green-color);
+    color: var(--green-color);
+  }
+  
+  .dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px var(--green-color);
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px var(--green-color);
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: .5s;
+  }
+  
+  @keyframes dotPulseBefore {
+    0% {
+      box-shadow: 9984px 0 0 -5px var(--green-color);
+    }
+    30% {
+      box-shadow: 9984px 0 0 2px var(--green-color);
+    }
+    60%,
+    100% {
+      box-shadow: 9984px 0 0 -5px var(--green-color);
+    }
+  }
+  
+  @keyframes dotPulse {
+    0% {
+      box-shadow: 9999px 0 0 -5px var(--green-color);
+    }
+    30% {
+      box-shadow: 9999px 0 0 2px var(--green-color);
+    }
+    60%,
+    100% {
+      box-shadow: 9999px 0 0 -5px var(--green-color);
+    }
+  }
+  
+  @keyframes dotPulseAfter {
+    0% {
+      box-shadow: 10014px 0 0 -5px var(--green-color);
+    }
+    30% {
+      box-shadow: 10014px 0 0 2px var(--green-color);
+    }
+    60%,
+    100% {
+      box-shadow: 10014px 0 0 -5px var(--green-color);
+    }
+  }

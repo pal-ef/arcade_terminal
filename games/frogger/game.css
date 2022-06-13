@@ -1,0 +1,79 @@
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    background-color: green;
+    box-sizing: content-box;
+    border: 5px solid var(--primary-color);
+    height: 500px; /* 180px; */
+    width: 500px; /* 180px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid > div {
+    /* Grid divided by nine*/
+    height: 55.555555556px;
+    width: 55.555555556px;
+}
+
+.ending-block {
+    background-image: url('flag.png');
+    background-size: cover;
+}
+
+.log-left, .log-right {
+    background-color: lightblue;
+}
+
+.l1 {
+    background-image: url('l1.png');
+    background-size: cover;
+}
+
+.l2 {
+    background-image: url('l2.png');
+    background-size: cover;
+}
+.l3 {
+    background-image: url('l3.png');
+    background-size: cover;
+}
+.car-left, .car-right {
+    background-color: gray;
+}
+
+.c1 {
+    background-image: url('car.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.car-right {
+    -moz-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    transform:scaleX(-1);
+}
+
+.frog {
+    background-image: url('frog.png');
+    background-size: cover;
+}
+
+.frog-log1 {
+    background-image: url('frog.png'), url('l1.png');
+    background-size: cover;
+}
+.frog-log2 {
+    background-image: url('frog.png'), url('l2.png');
+    background-size: cover;
+}
+.frog-log3 {
+    background-image: url('frog.png'), url('l3.png');
+    background-size: cover;
+}
